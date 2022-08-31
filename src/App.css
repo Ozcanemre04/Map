@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+body{
+  overflow-y:hidden;
+}
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.commune{
+  background-color: red;
+  width: 10px;
+  height: 10px;
+}
+.position{
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  padding: 10px;
+  z-index: 400;
+}
+.form{
+  position: absolute;
+  top: 10px;
+  right: 25%;
+  z-index: 400;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+main{
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-side{
+  width: 50%;
+}
+.right-side{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.modal{
+  
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 10%;
+  right: 0%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.dark{
+  visibility: hidden;
+}
+.line-chart ,.close{
+  width: 80%;
+  outline: none;
+  padding: 5px;
+  border: none;
+  background-color: beige;
+  border-radius: 5px;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
